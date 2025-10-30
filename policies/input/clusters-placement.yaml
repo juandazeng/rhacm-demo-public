@@ -9,4 +9,4 @@ spec:
       labelSelector:
         matchExpressions:
           - {key: vendor, operator: In, values: ["OpenShift"]}
-          - {key: "local-cluster", operator: NotIn, values: ["true"]}
+          - {key: "name", operator: NotIn, values: ["ocbc-hall1-prod"]}
