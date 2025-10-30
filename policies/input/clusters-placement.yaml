@@ -10,3 +10,4 @@ spec:
         matchExpressions:
           - {key: vendor, operator: In, values: ["OpenShift"]}
           - {key: "name", operator: NotIn, values: ["ocbc-hall1-prod"]}
+          - {key: "name", operator: NotIn, values: ["local-cluster"]}
