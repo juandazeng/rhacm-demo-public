@@ -123,7 +123,6 @@ policies:
     - path: input-compliance/
   policySets:
     - openshift-plus-clusters
-    - openshift-plus-hub
 # Compliance Operator Policies - end
 policySets:
   - description: The OpenShift Platform Plus policy set applies several policies
