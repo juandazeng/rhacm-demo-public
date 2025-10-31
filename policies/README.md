@@ -8,7 +8,7 @@
    - Follow the document [Requirements and Recommendations] for Red Hat Advanced Cluster Management for Kubernetes(https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.7/html/install/installing#requirements-and-recommendations)
   
 
-## Installation
+## Installation instructions
 
 The OpenShift Plus PolicySet contains two `PolicySets` that will be deployed.  The OpenShift Plus PolicySet installs everything onto the Open Cluster Management hub cluster.  The Advanced Cluster Security Secured Cluster Services and the Compliance Operator are deployed onto all OpenShift managed clusters.
 
