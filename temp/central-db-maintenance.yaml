@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: central-db-maintenance
+  namespace: stackrox
+spec:
+  containers:
+  - name: postgres-maintenance
+    image: postgres:15 # Use 13 for ACS 4.7 or older
+    command: ["/bin/sh", "-c", "sleep infinity"]
+    securityContext:
+      runAsUser: 70
+      fsGroup: 70
+    volumeMounts:
+    - name: db-data
+      mountPath: /var/lib/postgresql/data
+  securityContext:
+    fsGroup: 70
+  serviceAccount: central-db
+  serviceAccountName: central-db
+  volumes:
+  - name: db-data
+    persistentVolumeClaim:
+      claimName: central-db
