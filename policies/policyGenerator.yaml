@@ -90,28 +90,28 @@ policies:
   manifests:
     - path: input-sensor/policy-acs-central-ca-bundle-expired.yaml
     - path: input-sensor/policy-acs-central-ca-bundle-v2.yaml
-- name: policy-advanced-managed-cluster-security
-  categories:
-    - SI System and Information Integrity
-  consolidateManifests: false
-  controls:
-    - SI-5 Security Alerts Advisories and Directives
-  manifests:
-    - path: input-sensor/policy-advanced-managed-cluster-security.yaml
-  policySets:
-    - openshift-plus-clusters
-- name: policy-advanced-managed-cluster-status
-  categories:
-    - SI System and Information Integrity
-  controls:
-    - SI-5 Security Alerts Advisories and Directives
-  manifests:
-    - path: input-sensor/policy-advanced-managed-cluster-status.yaml
-  policySets:
-    - openshift-plus-hub
-    - openshift-plus-clusters
-  remediationAction: inform
-ACS Policies - end
+# - name: policy-advanced-managed-cluster-security
+#   categories:
+#     - SI System and Information Integrity
+#   consolidateManifests: false
+#   controls:
+#     - SI-5 Security Alerts Advisories and Directives
+#   manifests:
+#     - path: input-sensor/policy-advanced-managed-cluster-security.yaml
+#   policySets:
+#     - openshift-plus-clusters
+# - name: policy-advanced-managed-cluster-status
+#   categories:
+#     - SI System and Information Integrity
+#   controls:
+#     - SI-5 Security Alerts Advisories and Directives
+#   manifests:
+#     - path: input-sensor/policy-advanced-managed-cluster-status.yaml
+#   policySets:
+#     - openshift-plus-hub
+#     - openshift-plus-clusters
+#   remediationAction: inform
+# ACS Policies - end
 # Compliance Operator Policies - start
 - name: policy-compliance-operator-install
   categories:
