@@ -91,6 +91,7 @@ spec:
             # No jq in container, python to the rescue
             cat /tmp/bundle.json | python3 -c "import sys, json; print(json.load(sys.stdin)['kubectlBundle'])" | ${BASE} -d | oc apply -f -
             ACS_HOST="$(oc get route central -o custom-columns=HOST:.spec.host --no-headers):443"
+            echo "Central URL: $ACS_HOST"
             oc patch secret sensor-tls --type='json' -p="[{\"op\" : \"add\", \"path\" : \"/data/acs-host\", \"value\" : \"$(echo $ACS_HOST | ${BASE})\"}]"
             echo "ACS Cluster init bundle generated and applied"
           fi
